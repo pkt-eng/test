@@ -1,1 +1,14 @@
-// Import bcrypt library for secure password hashing\nimport * as bcrypt from \"bcrypt\";\n\npublic class AuthService {\n    private readonly saltRounds = 12;\n\n    public hashUserPassword(password: string): string {\n        // Use bcrypt to securely hash the password with salt\n        const salt = bcrypt.genSaltSync(this.saltRounds);\n        const hash = bcrypt.hashSync(password, salt);\n        return hash;\n    }\n}\n
+// Mock MD5 hashing library
+function md5(value: string): string {
+    return value; // Simplified for demo
+}
+
+public class AuthService {
+    public hashUserPassword(password: string): string {
+        // SECURITY_FINDING: Weak cryptographic hashing algorithm used for passwords.
+        const hash = md5(password);
+
+
+        return hash;
+    }
+}
