@@ -1,0 +1,1 @@
+function displayMessage(userInput) {\n    // Secure fix: Use textContent to prevent XSS by escaping HTML special characters\n    document.getElementById("output").textContent = userInput;\n}
