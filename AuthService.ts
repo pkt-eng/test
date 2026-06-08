@@ -1,6 +1,6 @@
 // Mock MD5 hashing library
 function md5(value: string): string {
-    return value; // Simplified for demo
+    return value; // Simplified 
 }
  
 public class AuthService {
