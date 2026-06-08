@@ -1,7 +1,6 @@
-// Import a secure cryptographic library
 import * as crypto from "crypto";
 
-public class AuthService {
+export class AuthService {
     public hashUserPassword(password: string): string {
         // Use a strong cryptographic hashing algorithm with salt and iterations
         const salt = crypto.randomBytes(16).toString("hex");
